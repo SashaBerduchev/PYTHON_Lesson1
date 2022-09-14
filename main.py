@@ -39,11 +39,13 @@ col = input("Enter column: ")
 row = input("Enter row: ")
 matrix = arrays.rarmatrix(row, col)
 print(matrix)
+conn.setMatrix(name, col, row, matrix)
 fac = input('Enter fac calc')
 faccalc = Factorial()
 res = faccalc.calFac(fac)
 resmath = faccalc.calFacmath(fac)
 print(res)
 print(resmath)
+conn.setFact(name, res)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
