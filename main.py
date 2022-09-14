@@ -32,6 +32,8 @@ arrays = Array()
 print("You put: " + arrcount);
 arrres = arrays.ranarr(arrcount)
 print(arrres)
+print(len(arrres))
+conn.setArray(name,arrres)
 
 col = input("Enter column: ")
 row = input("Enter row: ")
