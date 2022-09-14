@@ -1,6 +1,7 @@
 # This is a sample Python script.
 import array
 
+from MathWork.Factorial import Factorial
 from arrayswork import Array
 
 
@@ -28,4 +29,11 @@ col = input("Enter column: ")
 row = input("Enter row: ")
 matrix = arrays.rarmatrix(row, col)
 print(matrix)
+fac = input('Enter fac calc')
+faccalc = Factorial()
+res = faccalc.calFac(fac)
+resmath = faccalc.calFacmath(fac)
+print(res)
+print(resmath)
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
