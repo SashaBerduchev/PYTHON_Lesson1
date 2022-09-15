@@ -53,7 +53,7 @@ class MSSQLConnect:
             print('Rows inserted: ' + str(count))
         cnxn.commit()
 
-    def setMatrix(self, Name, col, row, matrix):
+    def setMatrix(self, Name, Sername, Email, col, row, matrix):
         server = 'ALEXANDER'
         database = 'PYTHONLesson1'
         username = 'myusername'
@@ -66,8 +66,8 @@ class MSSQLConnect:
         for i in range(int(row)):
             for j in range(0, int(col)):
                 count = cursor.execute("""
-                    INSERT INTO Matrix (Name, ArrElem) 
-                    VALUES (?, ?)""", Name, float(matrix[i][j])).rowcount
+                    INSERT INTO Matrix (Name, ArrElem,Sername, Email) 
+                    VALUES (?, ?, ?, ?)""", Name, float(matrix[i][j]), Sername, Email).rowcount
                 print('Rows inserted: ' + str(count))
         cnxn.commit()
 
