@@ -19,11 +19,17 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
-name = input("Enter name: ")
-print('Hellow ' + name)
-
 
 conn = MSSQLConn.MSSQLConnect()
+name = input("Enter name: ")
+print('Hellow ' + name)
+lastname = input("Enter your family: ")
+age = input('Enter your age: ')
+Email = input("Enteryou email: ")
+conn.setUser(name, lastname, age, Email)
+
+
+
 conn.setName(name)
 
 
@@ -33,8 +39,7 @@ print("You put: " + arrcount);
 arrres = arrays.ranarr(arrcount)
 print(arrres)
 print(len(arrres))
-conn.setArray(name,arrres)
-
+conn.setArray(name, lastname, Email, arrres)
 col = input("Enter column: ")
 row = input("Enter row: ")
 matrix = arrays.rarmatrix(row, col)
