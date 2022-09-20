@@ -2,6 +2,7 @@ import pyodbc as pyodbc
 
 class MSSQLConnect:
 
+     
     def setUser(self, Name, LastName, Age, Email):
         server = 'ALEXANDER'
         database = 'PYTHONLesson1'
