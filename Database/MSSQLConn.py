@@ -57,8 +57,8 @@ class MSSQLConnect:
     def setMatrix(self, Name, Sername, Email, col, row, matrix):
         server = 'ALEXANDER'
         database = 'PYTHONLesson1'
-        username = 'myusername'
-        password = 'mypassword'
+        username = 'sa'
+        password = 'Sasha24'
         cnxn = pyodbc.connect(
             'Driver={SQL Server};Server=' + server + ';Port=1433;Database=' + database + ';trusted_connection=yes')
         cursor = cnxn.cursor()
