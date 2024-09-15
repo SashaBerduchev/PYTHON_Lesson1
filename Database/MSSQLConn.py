@@ -6,10 +6,10 @@ class MSSQLConnect:
     def setUser(self, Name, LastName, Age, Email):
         server = 'ALEXANDER'
         database = 'PYTHONLesson1'
-        username = 'myusername'
-        password = 'mypassword'
+        username = 'sa'
+        password = 'Sasha24'
         cnxn = pyodbc.connect(
-            'Driver={SQL Server};Server=' + server + ';Port=1433;Database=' + database + ';trusted_connection=yes')
+            f'DRIVER={{ODBC Driver 18 for SQL Server}};Server={server};Database={database};Port=1433;User ID={username};Password={password}')
         cursor = cnxn.cursor()
         print('conn_start')
 
